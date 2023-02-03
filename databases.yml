@@ -1,0 +1,25 @@
+version: '3'
+
+services:
+  mongodb:
+    container_name: hexagonal_course_mongodb
+    image: mongo:4.4
+    restart: always
+    volumes:
+      - ~/docker-volumes/hexagonal_course_mongodb/data/db:/data/db
+      - ~/docker-volumes/hexagonal_course_mongodb/data/configdb:/data/configdb
+    ports:
+      - 27017:27017
+  postgres:
+    container_name: hexagonal_course_postgres
+    image: postgres:11
+    restart: always
+    volumes:
+      - ~/docker-volumes/hexagonal_course_postgres:/data/postgres
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_DB: hexagonal_course
+      POSTGRES_USER: hexagonal_course
+      POSTGRES_PASSWORD: hexagonal_course
+      PGDATA: /data/postgres

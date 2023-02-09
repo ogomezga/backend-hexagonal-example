@@ -1,0 +1,8 @@
+export enum DomainErrorCode {
+  THIRD_PARTY,
+  AUTHORIZATION,
+  ACCESS,
+  BUSINESS_CONFLICT,
+  NOT_FOUND,
+  NOT_IMPLEMENTED,
+}

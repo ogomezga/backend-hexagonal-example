@@ -1,4 +1,4 @@
-module.exports = {
+const config = {
     roots: ['<rootDir>/src'],
     transform: {
         '^.+\\/tsx?$': 'ts-jest',
@@ -6,7 +6,7 @@ module.exports = {
     testRegex: '(/_tests_/.*|(\\.|/)(test|spec))\\.tsx?$',
     testPathIgnorePatterns: ['/node_modules/'],
     moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
-    testEnvironments: 'node',
+    testEnvironment: 'node',
     globalSetup: '<rootDir>/src/test/test-helpers/global-setup.ts',
     globalTeardown: '<rootDir>/src/test/test-helpers/global-teardown.ts',
     coverageDirectory: '<rootDir>/coverage',
@@ -18,4 +18,6 @@ module.exports = {
             isolatedModules: true
         }
     }
-}
+};
+  
+export default config;

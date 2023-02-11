@@ -1,7 +1,7 @@
-const config = {
+module.exports = {
     roots: ['<rootDir>/src'],
     transform: {
-        '^.+\\/tsx?$': 'ts-jest',
+      '^.+\\.tsx?$': 'ts-jest',
     },
     testRegex: '(/_tests_/.*|(\\.|/)(test|spec))\\.tsx?$',
     testPathIgnorePatterns: ['/node_modules/'],
@@ -14,10 +14,8 @@ const config = {
     clearMocks: true,
     testTimeout: 15000,
     globals: {
-        'ts-jest': {
-            isolatedModules: true
-        }
+      'ts-jest': {
+        isolatedModules: true
+      }
     }
-};
-  
-export default config;
+  };
